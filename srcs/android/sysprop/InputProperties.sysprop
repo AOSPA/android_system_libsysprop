@@ -15,15 +15,6 @@
 module: "android.sysprop.InputProperties"
 owner: Platform
 
-# The default VelocityTracker strategy.
-prop {
-    api_name: "velocitytracker_strategy"
-    type: String
-    scope: Internal
-    access: ReadWrite
-    prop_name: "persist.input.velocitytracker.strategy"
-}
-
 # A debug flag that converts all touch pointers to stylus pointers.
 # Requires a reboot to take effect.
 prop {
@@ -32,4 +23,12 @@ prop {
     scope: Internal
     access: Readonly
     prop_name: "persist.debug.input.simulate_stylus_with_touch"
+}
+# A flag to enable global drag and drop feature.
+prop {
+    api_name: "enable_global_drag_and_drop"
+    type: Boolean
+    scope: Internal
+    access: Readonly
+    prop_name: "persist.input.globaldraganddrop"
 }
