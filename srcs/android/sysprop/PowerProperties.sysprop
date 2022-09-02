@@ -34,3 +34,13 @@ prop {
     access: ReadWrite
     prop_name: "power.battery_input.suspended"
 }
+
+# Allows apps to turn the screen on with android.os.PowerManager#ACQUIRE_CAUSES_WAKEUP
+# without being granted android.app.AppOpsManager#OP_TURN_SCREEN_ON.
+prop {
+    api_name: "permissionless_turn_screen_on"
+    type: Boolean
+    scope: Internal
+    access: ReadWrite
+    prop_name: "debug.power.permissionless_turn_screen_on"
+}
