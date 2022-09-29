@@ -514,30 +514,6 @@ props {
   }
 }
 props {
-  module: "android.sysprop.VoldProperties"
-  prop {
-    api_name: "decrypt"
-    type: String
-    access: ReadWrite
-    scope: Internal
-    prop_name: "vold.decrypt"
-  }
-  prop {
-    api_name: "encrypt_progress"
-    type: String
-    access: ReadWrite
-    scope: Internal
-    prop_name: "vold.encrypt_progress"
-  }
-  prop {
-    api_name: "encrypt_time_remaining"
-    type: Integer
-    access: ReadWrite
-    scope: Internal
-    prop_name: "vold.encrypt_time_remaining"
-  }
-}
-props {
   module: "android.sysprop.WifiProperties"
   prop {
     api_name: "start_supplicant"

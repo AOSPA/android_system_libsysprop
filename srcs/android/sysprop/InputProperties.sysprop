@@ -24,11 +24,3 @@ prop {
     access: Readonly
     prop_name: "persist.debug.input.simulate_stylus_with_touch"
 }
-# A flag to enable global drag and drop feature.
-prop {
-    api_name: "enable_global_drag_and_drop"
-    type: Boolean
-    scope: Internal
-    access: Readonly
-    prop_name: "persist.input.globaldraganddrop"
-}
