@@ -57,3 +57,13 @@ prop {
     access: Readonly
     prop_name: "debug.display.allow_non_native_refresh_rate_override"
 }
+
+# When set to true, the render frame rate is considered the physical refresh rate
+prop {
+    api_name: "debug_render_frame_rate_is_physical_refresh_rate"
+    type: Boolean
+    scope: Internal
+    access: Readonly
+    prop_name: "debug.display.render_frame_rate_is_physical_refresh_rate"
+}
+
