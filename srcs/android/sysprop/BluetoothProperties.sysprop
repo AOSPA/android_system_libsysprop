@@ -628,3 +628,12 @@ prop {
     access: Readonly
     prop_name: "bluetooth.core.le.inquiry_scan_window"
 }
+
+# Used to disable enhanced SCO connection
+prop {
+    api_name: "getDisableEnchancedConnection"
+    type: Boolean
+    scope: Internal
+    access: Readonly
+    prop_name: "bluetooth.sco.disable_enhanced_connection"
+}
