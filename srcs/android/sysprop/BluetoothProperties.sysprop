@@ -612,3 +612,28 @@ prop {
     access: Readonly
     prop_name: "bluetooth.core.le.connection_scan_window_slow"
 }
+
+# LE scanning parameters used during BTM inquiry
+prop {
+    api_name: "getLeInquiryScanInterval"
+    type: UInt
+    scope: Internal
+    access: Readonly
+    prop_name: "bluetooth.core.le.inquiry_scan_interval"
+}
+prop {
+    api_name: "getLeInquiryScanWindow"
+    type: UInt
+    scope: Internal
+    access: Readonly
+    prop_name: "bluetooth.core.le.inquiry_scan_window"
+}
+
+# Used to disable enhanced SCO connection
+prop {
+    api_name: "getDisableEnchancedConnection"
+    type: Boolean
+    scope: Internal
+    access: Readonly
+    prop_name: "bluetooth.sco.disable_enhanced_connection"
+}
