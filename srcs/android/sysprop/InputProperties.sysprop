@@ -34,3 +34,12 @@ prop {
     access: Readonly
     prop_name: "persist.input.touchpad.gestures_library.enabled"
 }
+
+# A flag to enable or disable system motion prediction.
+prop {
+    api_name: "enable_motion_prediction"
+    type: Boolean
+    scope: Internal
+    access: Readonly
+    prop_name: "persist.input.enable_motion_prediction"
+}

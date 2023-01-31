@@ -63,6 +63,16 @@ prop {
     prop_name: "bluetooth.core.gap.le.conn.min.limit"
 }
 
+# Whether LE Connection with initiating with only LE 1M PHY.
+# Set by vendors overlay, read at Bluetooth initialization
+prop {
+    api_name: "isGapLeConnOnlyInit1mPhyEnabled"
+    type: Boolean
+    scope: Internal
+    access: Readonly
+    prop_name: "bluetooth.core.gap.le.conn.only_init_1m_phy.enabled"
+}
+
 # The default name of the device.
 # Set by vendors overlay, read at Bluetooth initialization
 prop {
