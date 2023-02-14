@@ -93,6 +93,31 @@ prop {
     prop_name: "bluetooth.device.class_of_device"
 }
 
+# The default audio profile for dual mode audio devices for output only audio. The value should be
+# the integer value of BluetoothProfile#A2DP (2) or BluetoothProfile#LE_AUDIO (22). If the value is
+# set to anything else, LE Audio will be the default.
+# Set by vendors overlay, read at Bluetooth initialization
+prop {
+    api_name: "getDefaultOutputOnlyAudioProfile"
+    type: Integer
+    scope: Public
+    access: Readonly
+    prop_name: "bluetooth.device.default_output_only_audio_profile"
+}
+
+# The default audio profile for dual mode audio devices for duplex (output + input) audio. The
+# value should be the integer value of BluetoothProfile#HEADSET (1) or
+# BluetoothProfile#LE_AUDIO (22). If the value is set to anything else, LE Audio will be the
+# default.
+# Set by vendors overlay, read at Bluetooth initialization
+prop {
+    api_name: "getDefaultDuplexAudioProfile"
+    type: Integer
+    scope: Public
+    access: Readonly
+    prop_name: "bluetooth.device.default_duplex_audio_profile"
+}
+
 # Bluetooth operating voltage in millivolts available for vendors overlay.
 # Used to calculate Bluetooth power consumption for a specific hardware.
 prop {
