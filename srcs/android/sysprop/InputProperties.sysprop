@@ -24,3 +24,13 @@ prop {
     access: Readonly
     prop_name: "persist.debug.input.simulate_stylus_with_touch"
 }
+
+# A flag to enable the new touchpad input mapper introduced in Android U, based around the ChromeOS
+# gestures library.
+prop {
+    api_name: "enable_touchpad_gestures_library"
+    type: Boolean
+    scope: Internal
+    access: Readonly
+    prop_name: "persist.input.touchpad.gestures_library.enabled"
+}

@@ -35,4 +35,5 @@ sysprop_library {
         min_sdk_version: "S",
     },
     vendor_available: true,
+    host_supported: true,
 }
