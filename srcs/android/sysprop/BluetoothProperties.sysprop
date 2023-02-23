@@ -664,6 +664,15 @@ prop {
     prop_name: "bluetooth.core.le.inquiry_scan_window"
 }
 
+# Used to disable LeGetVendorCapabilities.
+prop {
+    api_name: "getLeVendorCapabilitiesEnabled"
+    type: Boolean
+    scope: Internal
+    access: Readonly
+    prop_name: "bluetooth.core.le.vendor_capabilities.enabled"
+}
+
 # Used to disable enhanced SCO connection
 prop {
     api_name: "getDisableEnchancedConnection"
