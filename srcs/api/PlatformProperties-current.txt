@@ -68,6 +68,10 @@ props {
     prop_name: "bluetooth.core.gap.le.privacy.enabled"
   }
   prop {
+    api_name: "isLeAudioInbandRingtoneSupported"
+    prop_name: "bluetooth.core.le_audio.inband_ringtone.supported"
+  }
+  prop {
     api_name: "isProfileA2dpSinkEnabled"
     prop_name: "bluetooth.profile.a2dp.sink.enabled"
   }
@@ -184,11 +188,46 @@ props {
     prop_name: "bluetooth.framework.support_persisted_state"
   }
   prop {
+    api_name: "le_audio_allow_list"
+    type: StringList
+    access: ReadWrite
+    prop_name: "persist.bluetooth.leaudio.allow_list"
+  }
+  prop {
     api_name: "snoop_default_mode"
     type: Enum
     access: ReadWrite
     prop_name: "persist.bluetooth.btsnoopdefaultmode"
     enum_values: "empty|disabled|filtered|full"
+  }
+  prop {
+    api_name: "snoop_log_filter_profile_a2dp_enabled"
+    access: ReadWrite
+    prop_name: "persist.bluetooth.snooplogfilter.profiles.a2dp.enabled"
+  }
+  prop {
+    api_name: "snoop_log_filter_profile_map"
+    type: Enum
+    access: ReadWrite
+    prop_name: "persist.bluetooth.snooplogfilter.profiles.map"
+    enum_values: "empty|disabled|fullfilter|header|magic"
+  }
+  prop {
+    api_name: "snoop_log_filter_profile_pbap"
+    type: Enum
+    access: ReadWrite
+    prop_name: "persist.bluetooth.snooplogfilter.profiles.pbap"
+    enum_values: "empty|disabled|fullfilter|header|magic"
+  }
+  prop {
+    api_name: "snoop_log_filter_profile_rfcomm_enabled"
+    access: ReadWrite
+    prop_name: "persist.bluetooth.snooplogfilter.profiles.rfcomm.enabled"
+  }
+  prop {
+    api_name: "snoop_log_filter_snoop_headers_enabled"
+    access: ReadWrite
+    prop_name: "persist.bluetooth.snooplogfilter.headers.enabled"
   }
   prop {
     api_name: "snoop_log_mode"
