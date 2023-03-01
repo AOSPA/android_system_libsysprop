@@ -25,6 +25,16 @@ props {
     prop_name: "bluetooth.device.default_name"
   }
   prop {
+    api_name: "getDefaultDuplexAudioProfile"
+    type: Integer
+    prop_name: "bluetooth.device.default_duplex_audio_profile"
+  }
+  prop {
+    api_name: "getDefaultOutputOnlyAudioProfile"
+    type: Integer
+    prop_name: "bluetooth.device.default_output_only_audio_profile"
+  }
+  prop {
     api_name: "getGapLeConnMinLimit"
     type: Integer
     prop_name: "bluetooth.core.gap.le.conn.min.limit"

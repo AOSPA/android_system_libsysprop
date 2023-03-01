@@ -34,3 +34,23 @@ prop {
     access: Readonly
     prop_name: "persist.input.touchpad.gestures_library.enabled"
 }
+
+# A flag to enable or disable system motion prediction.
+prop {
+    api_name: "enable_motion_prediction"
+    type: Boolean
+    scope: Internal
+    access: Readonly
+    prop_name: "persist.input.enable_motion_prediction"
+}
+
+# A flag to enable the new Keyboard backlight controller introduced in Android U, that allows
+# Framework to control keyboard backlight on supported devices.
+prop {
+    api_name: "enable_keyboard_backlight_control"
+    type: Boolean
+    scope: Internal
+    access: Readonly
+    prop_name: "persist.input.keyboard.backlight_control.enabled"
+}
+
