@@ -33,12 +33,76 @@ prop {
     prop_name: "persist.bluetooth.btsnooplogmode"
 }
 
+# When snoop_log_mode is set as filtered, this filter truncates ACL packets (non-fragment)
+# to fixed (MAX_HCI_ACL_LEN) number of bytes
+prop {
+    api_name: "snoop_log_filter_snoop_headers_enabled"
+    type: Boolean
+    scope: Public
+    access: ReadWrite
+    prop_name: "persist.bluetooth.snooplogfilter.headers.enabled"
+}
+
+# When snoop_log_mode is set as filtered, this filter discards A2DP media packets (non-split mode)
+prop {
+    api_name: "snoop_log_filter_profile_a2dp_enabled"
+    type: Boolean
+    scope: Public
+    access: ReadWrite
+    prop_name: "persist.bluetooth.snooplogfilter.profiles.a2dp.enabled"
+}
+
+# When snoop_log_mode is set as filtered, this filters MAP packets based on the filter mode:
+#  fullfilter - discard whole packet
+#  header     - truncate to fixed length
+#  magic      - fill with a magic string, such as: "PROHIBITED"
+prop {
+    api_name: "snoop_log_filter_profile_map"
+    type: Enum
+    scope: Public
+    access: ReadWrite
+    enum_values: "empty|disabled|fullfilter|header|magic"
+    prop_name: "persist.bluetooth.snooplogfilter.profiles.map"
+}
+
+# When snoop_log_mode is set as filtered, this filters PBAP and HFP packets (CPBR, CLCC)
+# based on the filter mode:
+#  fullfilter - discard whole packet
+#  header     - truncate to fixed length
+#  magic      - fill with a magic string, such as: "PROHIBITED"
+prop {
+    api_name: "snoop_log_filter_profile_pbap"
+    type: Enum
+    scope: Public
+    access: ReadWrite
+    enum_values: "empty|disabled|fullfilter|header|magic"
+    prop_name: "persist.bluetooth.snooplogfilter.profiles.pbap"
+}
+
+# When snoop_log_mode is set as filtered, this filter truncates RFCOMM UIH packet
+# to fixed (L2CAP_HEADER_SIZE) number of bytes
+prop {
+    api_name: "snoop_log_filter_profile_rfcomm_enabled"
+    type: Boolean
+    scope: Public
+    access: ReadWrite
+    prop_name: "persist.bluetooth.snooplogfilter.profiles.rfcomm.enabled"
+}
+
 prop {
     api_name: "factory_reset"
     type: Boolean
     scope: Public
     access: ReadWrite
     prop_name: "persist.bluetooth.factoryreset"
+}
+
+prop {
+    api_name: "le_audio_allow_list"
+    type: StringList
+    scope: Public
+    access: ReadWrite
+    prop_name: "persist.bluetooth.leaudio.allow_list"
 }
 
 ######## Bluetooth configurations
@@ -71,6 +135,16 @@ prop {
     scope: Internal
     access: Readonly
     prop_name: "bluetooth.core.gap.le.conn.only_init_1m_phy.enabled"
+}
+
+# Whether Inband ringtone for LeAudio is supported.
+# Set by vendors overlay, read at Bluetooth initialization
+prop {
+    api_name: "isLeAudioInbandRingtoneSupported"
+    type: Boolean
+    scope: Public
+    access: Readonly
+    prop_name: "bluetooth.core.le_audio.inband_ringtone.supported"
 }
 
 # The default name of the device.
@@ -662,6 +736,15 @@ prop {
     scope: Internal
     access: Readonly
     prop_name: "bluetooth.core.le.inquiry_scan_window"
+}
+
+# Used to disable LeGetVendorCapabilities.
+prop {
+    api_name: "getLeVendorCapabilitiesEnabled"
+    type: Boolean
+    scope: Internal
+    access: Readonly
+    prop_name: "bluetooth.core.le.vendor_capabilities.enabled"
 }
 
 # Used to disable enhanced SCO connection
