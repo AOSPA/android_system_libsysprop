@@ -489,3 +489,12 @@ prop {
     access: ReadWrite
     prop_name: "ril.inscbm"
 }
+
+# Indicate if DSDS transition feature is supported
+prop {
+    api_name: "dsds_transition_supported"
+    type: Boolean
+    scope: Internal
+    access: ReadWrite
+    prop_name: "ril.multisim.dsds_transition_supported"
+}
