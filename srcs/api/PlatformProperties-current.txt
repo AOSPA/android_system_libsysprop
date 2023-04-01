@@ -312,6 +312,31 @@ props {
   }
 }
 props {
+  module: "android.sysprop.NfcProperties"
+  prop {
+    api_name: "debug_enabled"
+    access: ReadWrite
+    prop_name: "persist.nfc.debug_enabled"
+  }
+  prop {
+    api_name: "skipNdefRead"
+    prop_name: "nfc.dta.skip_ndef_read"
+    legacy_prop_name: "nfc.dta.skipNdefRead"
+  }
+  prop {
+    api_name: "snoop_log_mode"
+    type: Enum
+    access: ReadWrite
+    prop_name: "persist.nfc.snoop_log_mode"
+    enum_values: "full|filtered"
+  }
+  prop {
+    api_name: "vendor_debug_enabled"
+    access: ReadWrite
+    prop_name: "persist.nfc.vendor_debug_enabled"
+  }
+}
+props {
   module: "android.sysprop.OtaProperties"
   prop {
     api_name: "ab_ota_partitions"
