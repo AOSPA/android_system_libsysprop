@@ -26,20 +26,6 @@ props {
     prop_name: "android.car.systemuser.bootuseroverrideid"
   }
   prop {
-    api_name: "number_pre_created_guests"
-    type: Integer
-    access: ReadWrite
-    scope: Internal
-    prop_name: "android.car.number_pre_created_guests"
-  }
-  prop {
-    api_name: "number_pre_created_users"
-    type: Integer
-    access: ReadWrite
-    scope: Internal
-    prop_name: "android.car.number_pre_created_users"
-  }
-  prop {
     api_name: "trusted_device_device_name_prefix"
     type: String
     scope: Internal
