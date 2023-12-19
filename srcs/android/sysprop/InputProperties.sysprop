@@ -64,3 +64,40 @@ prop {
     prop_name: "persist.debug.input.force_enable_stylus_pointer_icon"
 }
 
+# A flag to enable the Keyboard backlight animations introduced in Android U-QPR.
+prop {
+    api_name: "enable_keyboard_backlight_animation"
+    type: Boolean
+    scope: Internal
+    access: Readonly
+    prop_name: "persist.input.keyboard.backlight_animation.enabled"
+}
+
+# A flag to start logging atoms relating into input device usage metrics. Requires restart.
+prop {
+    api_name: "enable_input_device_usage_metrics"
+    type: Boolean
+    scope: Internal
+    access: Readonly
+    prop_name: "persist.debug.input.enable_input_device_usage_metrics"
+}
+
+# A flag to enable the Custom levels provided via IDC files for Keyboard backlight
+# introduced in Android U-QPR1.
+prop {
+    api_name: "enable_keyboard_backlight_custom_levels"
+    type: Boolean
+    scope: Internal
+    access: Readonly
+    prop_name: "persist.input.keyboard.backlight_custom_levels.enabled"
+}
+
+
+# A flag to enable ALS based keyboard backlight control introduced in Android U-QPR1.
+prop {
+    api_name: "enable_ambient_keyboard_backlight_control"
+    type: Boolean
+    scope: Internal
+    access: Readonly
+    prop_name: "persist.input.keyboard.ambient_backlight_control.enabled"
+}

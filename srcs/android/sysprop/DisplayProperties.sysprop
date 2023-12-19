@@ -49,3 +49,13 @@ prop {
     prop_name: "debug.layout"
 }
 
+# String to specify which package, if any,
+# should have additional logging.
+prop {
+    api_name: "debug_vri_package"
+    type: String
+    scope: Internal
+    access: ReadWrite
+    prop_name: "persist.debug.vri_package"
+}
+
